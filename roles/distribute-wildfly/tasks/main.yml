@@ -1,0 +1,7 @@
+# Fetch and unzip wildfly if needed -- src is in the local archive on
+# the ansible server
+
+---
+- name: Fetch and unpack WildFly
+  unarchive: src="{{wildfly}}.tar.gz" dest=/tmp creates="/tmp/{{wildfly}}"
+

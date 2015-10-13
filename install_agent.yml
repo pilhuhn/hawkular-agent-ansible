@@ -1,0 +1,22 @@
+
+- hosts: wildfly-servers
+
+  vars:
+    # Wildfly to use
+    #    wildfly: wildfly-9.0.1.Final
+    wildfly: wildfly-10.0.0.CR2
+    # base url of the Hawkular server
+    server_url: http://snert:8080
+    # version of the agent module
+    agent: hawkular-monitor-0.10.1.Final-SNAPSHOT-module.zip
+    # version of the agent installer
+    installer: agent-installer-0.10.1.Final-SNAPSHOT.jar
+    bin: "/tmp/{{wildfly}}/bin"
+
+  roles: 
+    - distribute-wildfly
+    - distribute-agent
+    - distribute-installer
+    - configure-agent
+    - start-wildfly
+

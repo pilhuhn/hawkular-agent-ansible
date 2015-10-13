@@ -1,0 +1,13 @@
+#!/usr/local/bin/ansible-playbook
+
+
+# Start wildfly 
+# There is a much cooler role at https://github.com/ansible/ansible-examples/blob/master/jboss-standalone/roles/jboss-standalone/tasks/main.yml
+
+- name: start wildfly
+  shell: nohup "{{bin}}/standalone.sh" -b 0.0.0.0  &
+  args:
+    chdir: "/tmp/{{wildfly}}"
+  environment:
+    LAUNCH_JBOSS_IN_BACKGROUND: true
+

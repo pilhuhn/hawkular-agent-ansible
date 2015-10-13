@@ -1,0 +1,16 @@
+= Ansible module for WildFly with Hawkular-agent
+
+This playbook distributes WildFly servers to machines
+in the `wildfly-servers` inventory group. Those
+servers will be equipped with the Hawkular agent and
+automatically be configured.
+
+It currently assumes that the following list of
+items is already present in the directory:
+
+* agent-installer-0.10.1.Final-SNAPSHOT.jar -- the agent installer
+* hawkular-monitor-0.10.1.Final-SNAPSHOT-module.zip -- the agent itself
+* wildfly-10.0.0.CR2.tar.gz -- the WildFly server to use
+
+You can tune the versions in the `vars` section of `install_agent.yml`.
+
