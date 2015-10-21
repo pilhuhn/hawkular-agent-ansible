@@ -1,0 +1,3 @@
+
+  - get_url: url=http://download.jboss.org/wildfly/{{wildfly_version}}/{{wildfly}}.tar.gz  dest={{wildfly}}.tar.gz
+    delegate_to: localhost

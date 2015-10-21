@@ -1,10 +1,6 @@
 # Playbook to shutdown as series of WF servers via CLI command
 
 - hosts: wildfly-servers
-  vars:
-   #    wildfly: wildfly-9.0.1.Final
-    wildfly: wildfly-10.0.0.CR2
-    bin: "/tmp/{{wildfly}}/bin"
 
   tasks:
     - command: "{{bin}}/jboss-cli.sh --connect --command=:shutdown"
