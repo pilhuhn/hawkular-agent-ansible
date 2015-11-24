@@ -5,7 +5,7 @@
   wildfly_version: 10.0.0.CR3
   wildfly: wildfly-{{wildfly_version}}
   agent_version: 0.11.1.Final
-  agent: hawkular-monitor-{{agent_version}}-module.zip
-  installer: hawkular-wildfly-monitor-installer-0.10.1.Final-SNAPSHOT-standalone.jar
+  agent: hawkular-wildfly-agent-wf-extension.zip
+  installer: hawkular-wildfly-agent-installer-0.13.4.Final.jar
   bin: "/tmp/{{wildfly}}/bin"
   server_url: http://snert:8080

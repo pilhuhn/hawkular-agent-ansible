@@ -2,7 +2,7 @@
 
 ---
 - name: run installer
-  command: java -jar /tmp/{{installer}} --module=/tmp/{{agent}} --wildfly-home=/tmp/{{wildfly}} --hawkular-server-url={{server_url}}
+  command: java -jar /tmp/{{installer}} --module=/tmp/{{agent}} --target-location=/tmp/{{wildfly}} --server-url={{server_url}}
 
 
       
