@@ -1,9 +1,0 @@
-# Fetch the agent if needed from the ansible master
-
----
-- name: "Check for agent distro"
-  stat: path="/tmp/{{agent}}"
-  register: ag
-- name: push agent
-  copy: src="{{agent}}" dest="/tmp/" 
-  when: ag.stat.exists != true

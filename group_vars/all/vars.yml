@@ -2,10 +2,8 @@
 ---
    # Wildfly to use
    #    wildfly: wildfly-9.0.1.Final
-  wildfly_version: 10.0.0.CR3
+  wildfly_version: 10.0.0.CR5
   wildfly: wildfly-{{wildfly_version}}
-  agent_version: 0.11.1.Final
-  agent: hawkular-wildfly-agent-wf-extension.zip
-  installer: hawkular-wildfly-agent-installer-0.13.4.Final.jar
+  installer: hawkular-wildfly-agent-installer.jar
   bin: "/tmp/{{wildfly}}/bin"
   server_url: http://snert:8080

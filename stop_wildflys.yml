@@ -4,3 +4,6 @@
 
   tasks:
     - command: "{{bin}}/jboss-cli.sh --connect --command=:shutdown"
+      when: ansible_hostname != "snert"
+    - command: "{{bin}}/jboss-cli.sh --connect controller=localhost:19990 --command=:shutdown"
+      when: ansible_hostname == "snert"

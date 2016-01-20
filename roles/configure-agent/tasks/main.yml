@@ -1,8 +1,0 @@
-# Run the previously downloaded installer
-
----
-- name: run installer
-  command: java -jar /tmp/{{installer}} --module=/tmp/{{agent}} --target-location=/tmp/{{wildfly}} --server-url={{server_url}}
-
-
-      

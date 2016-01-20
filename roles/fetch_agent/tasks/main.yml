@@ -1,3 +1,0 @@
-
-  - get_url: url=http://download.jboss.org/hawkular/wildfly-monitor/{{agent_version}}/{{agent}}  dest={{agent}}
-    delegate_to: localhost

@@ -4,11 +4,7 @@
   roles: 
     # Fetch WildFly from jboss.org if needed
     - fetch_wildfly
-    # Fetch agent from jboss.org if needed
-    - fetch_agent
     - distribute-wildfly
-    - distribute-agent
-    - distribute-installer
-    - configure-agent
+    - fetch-and-run-installer
     - start-wildfly
 

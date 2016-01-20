@@ -1,0 +1,12 @@
+
+- uri:
+    url: "{{server_url}}/hawkular/wildfly-agent/installer"
+    user: jdoe
+    password: password
+    force_basic_auth: yes
+    method: POST
+    body: "name=jdoe&password=password"
+    creates: /tmp/wf-installer.jar
+    dest: /tmp/wf-installer.jar
+
+- command: java -jar /tmp/wf-installer.jar --target-location=/tmp/{{wildfly}} --server-url={{server_url}}
