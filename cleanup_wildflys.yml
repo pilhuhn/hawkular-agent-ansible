@@ -4,5 +4,4 @@
 
   tasks:
     - file: path=/tmp/{{wildfly}}    state=absent
-    - file: path=/tmp/{{installer}}  state=absent
-    - file: path=/tmp/{{agent}}      state=absent
+    - file: path=/tmp/wf-installer.jar  state=absent
